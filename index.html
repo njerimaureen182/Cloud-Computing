@@ -10,11 +10,13 @@
 <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 <!-- <link rel="stylesheet" href="style.css"> -->
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     html, body{
         min-height: 100vh;
         box-sizing: border-box;
         flex: 75%;
         background: rgba(16, 29, 44, 1);
+        font-family: 'Montserrat', sans-serif;
     }
     .heading hr{
         max-width: 280px;
@@ -24,14 +26,15 @@
         background: rgba(169, 169, 169, .5);
     }
     .container{
-        letter-spacing: .3px;
+        letter-spacing: .6px;
+        padding: 0 20px;
     }
-    .vl{
+    /* .vl{
         height: 830px;
         border-left: 1px solid rgba(169, 169, 169, .5);
         position: absolute;
         left: 50%;
-    }
+    } */
 </style>
 </head>
 <body>
@@ -236,11 +239,11 @@
 
                    <div class="col-md-5">
                         <li>Platforms (Cloud Foundry)</li><br>
-                        <li>Serverless</li>   
+                        <li>Serverless</li><br>   
                    </div>
                </div>
            </ol>
-       </div>
+       </div><br>
 
        <div class="cloud-paks">
            <div class="cloud-paks-definition ml-4">
@@ -412,7 +415,7 @@
                             <li><small class="font-italic text-secondary" style="font-size: medium;">npm install
                             </small> - Installs node.js modules.</li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">npm audit fix
-                            </small> - Fixes any vulnerabilities to modules installed.
+                            </small> - Fixes any vulnerabilities to modules<br>installed.
                             </li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">node v</small> - Checks version of node installed.</li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">npm v</small> - Checks version of npm installed.</li><br>
@@ -425,13 +428,13 @@
                         <ol>
                             <h5 class="text-info">Kubernetes CLI</h5>
                         </ol>
-                        <p>Once you've downloaded the kubernetes command-line interface, you should add the directory where <small class="font-italic text-secondary" style="font-size: medium;">kubectl</small> is installed to the <small class="font-italic text-secondary" style="font-size: medium;">PATH</small> environment variable.</p><br>
+                        <p>Once you've downloaded the kubernetes command-line interface,<br> you should add the directory where <small class="font-italic text-secondary" style="font-size: medium;">kubectl</small> is installed to the <small class="font-italic text-secondary" style="font-size: medium;">PATH</small> environment variable.</p><br>
 
-                        <p><small class="font-italic">N/B:</small><small class="font-italic text-secondary" style="font-size: medium;"> kubectl</small> is the kubernetes command line tool that allows you to run commands against kubernetes clusters.</p>
+                        <p><small class="font-italic">N/B:</small><small class="font-italic text-secondary" style="font-size: medium;"> kubectl</small> is the kubernetes command line tool that allows you<br>to run commands against kubernetes clusters.</p>
                     </div>
                 </div>
 
-                <div class="vl"></div>
+                <!-- <div class="vl"></div> -->
                 
 
                 <div class="col-md-6">
@@ -440,6 +443,8 @@
                             <h5 class="text-info">IBM Cloud CLI Commands</h5><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud login</small> - Logs you in to IBM Cloud.</li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud --version</small> - Checks the version of IBM Cloud CLI installed.</li><br> 
+                            <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud cf</small> - Lists out cloud foundry commands.
+                            </li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud target --cf</small> - Sets up your IBM Cloud Foundry API endpoint.
                             </li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud cf push</small> - Pushes your app to IBM Cloud.</li><br>
@@ -458,7 +463,7 @@
                 </div>
 
             </div>
-        </div><br><br><br>
+        </div><br><br>
 
         <div class="organizations-spaces">
             <h5 class="text-info text-center font-weight-bold">ORGANIZATIONS AND SPACES
@@ -468,20 +473,21 @@
                 <li>Separation between Cloud Foundry resources.</li><br>
                 <li>Separation between teams.</li><br>
                 <li>Isolation of development, test, staging, and production environments.
-                </li><br>
-            </ol>
+                </li>
+            </ol><br><br>
 
             <div class="row">
                 <div class="col-md-6">
                     <ol>
                         <h5 class="text-info">Organizations</h5><br>
-                        <p>An abstraction level to manage resources, <small class="font-italic">e.g.</small> service availability, quota plans, applications and custom domains for multiple users. Collaborators in an organization these resources.</p>
+                        <p>An abstraction level to manage resources,<small class="font-italic">e.g.</small> service availability, quota plans, applications and custom domains<br>for multiple users.</p>
+                        <p>Collaborators in an organization these resources.</p>
                         
                     </ol>
                 </div>
                 <div class="col-md-6">
                     <ol>
-                        <h5 class="text-info">Spaces</h5>
+                        <h5 class="text-info">Spaces</h5><br>
                         <p>Provide a shared location for multiple users to deploy multiple apps.</p>
                         <p>Each space belongs to one organization and each organization has multiple spaces.</p>
                         <p>Any developer in a space can access and edit the configurations of an app.</p>
@@ -493,8 +499,144 @@
             </div>
         </div><br><br>
 
-        <div class="build-packs">
-            <h5 class="text-info font-weight-bold text-center">BUILD-PACKS</h5>
+        <div class="buildpacks">
+            <h5 class="text-info font-weight-bold text-center">BUILDPACKS</h5><br>
+            <p>A template and tools that help resolve runtime dependencies. For the sample app, cloud foundry auto-detects package.json and uses a Node.js buildpack. You can force cloud foundry to use a Node.js buildpack either by:</p><br>
+
+            <ol>
+                <div class="row">
+                    
+                    <div class="col-md-6">
+                        <li>Specifying the language key in the <small class="text-secondary" style="font-size: medium;">manifest.yml</small> file.</li>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <li>Pushing the app by running the following command: <small class="text-secondary" style="font-size: medium;">ibmcloud cf push -b buildpack_name</small></li>
+                    </div>
+
+                </div>
+            </ol><br>
+            <p><small class="text-secondary" style="font-size: medium;">Dependencies</small> are the programs and libraries Node.js requires to run. When deploying an application, a buildpack:</p><br>
+            <ol>
+                <div class="row">
+                    <div class="col-md-6">
+                        <li>Detects what language and tools are needed to run <br>the application.</li><br>
+                        <li>Supplies the dependencies.</li>
+
+                    </div>
+                    <div class="col-md-6">
+                        <li>Finalizes the app launch.</li><br>
+                        <li>Releases the app by assigning  the environment variables and<br> running the start commands.</li>
+                        
+                    </div>
+
+                </div>
+            </ol><br>
+
+            <p>To get a list of available buildpacks on IBM Cloud, use the command <small class="text-secondary" style="font-size: medium;">ibmcloud cf buildpacks</small>.</p>
+
+        </div><br><br>
+
+        <div class="resilience">
+            <h5 class="text-info text-center font-weight-bold">RESILIENCE (MAKING YOUR APP RESILIENT)</h5><br>
+            <p>Refers to ensuring that the actual no. of running applications matches the wanted state always. To configure the no. of instances you want in <small class="text-secondary" style="font-size: medium;">manifest.yml</small>, specify the no. of instances in the instances key. In the event of a failure, cloud foundry kills or recreates missing instances to match the wanted state.</p><br>
+
+            <h5 class="text-info">Making your app resilient using IBM Cloud CLI</h5><br>
+            <p>You can scale your app using the command : <small class="text-secondary" style="font-size: medium;">ibmcloud cf scale app_name -i no._of_instances
+            </small></p>
+            <p><small class="font-italic text-secondary">N/B:</small> It's recommended that you specify the no. of wanted instances in your <small class="text-secondary" style="font-size: medium;">manifest.yml</small> file to ensure your configurations are stored as code.</p>
+
+        </div><br><br>
+
+        <div class="debugging">
+            <h5 class="text-info text-center font-weight-bold">LOGGING, DEBUGGING AND BINDING EXTERNAL SERVICES</h5><br>
+            <p>The cloud foundry platform provides log aggregations. To view events and logs for a deployed app, run the following commands: <small class="text-secondary" style="font-size: medium;">ibmcloud cf events app_name</small> and <small class="text-secondary" style="font-size: medium;">ibmcloud cf logs app_name
+            </small>.</p>
+            
+        </div><br><br>
+
+        <div class="domains-routes">
+            <h5 class="text-info text-center font-weight-bold">DOMAINS AND ROUTES</h5><br>
+            <p>Enable internet traffic to flow to and from your app. A route (URL) consists of a <small class="text-secondary" style="font-size: medium;"> host prefix
+            </small> and a <small class="text-secondary" style="font-size: medium;"> domain
+            </small>. An app can have multiple routes and one route can serve multiple applications using <small class="text-secondary" style="font-size: medium;"> path routing</small>.</p>
+            <p><small class="font-italic">N/B:</small> IBM Cloud provides domains for each region while the dev specifies  a unique host prefix for an app.</p><br><br>
+
+            <ol style="list-style: none;">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <li><small class="text-info" style="font-size: medium;">host prefix</small> </li><br>
+                        <p>vy301-2eb-nodesample</p>
+                    </div>
+
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-4">
+                        <li><small class="text-info" style="font-size: medium;">region
+                        </small> </li><br>
+                        <p>.eu-gb.</p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <li><small class="text-info" style="font-size: medium;">domain
+                        </small> </li><br>
+                        <p>cf.appdomain.cloud</p>
+                    </div> 
+                </div>
+    
+            </ol><br>
+    
+        
+            <p>An example of an app with 2 routes:</p><br>
+            <ol>
+                <div class="row">
+                    <div class="col-md-6">
+                        <li><small class="text-secondary" style="font-size: medium;">
+                            https://www.YourWebsite.com/calendar</small></li>
+                    </div>
+                    <div class="col-md-6">
+                        <li><small class="text-secondary" style="font-size: medium;">
+                            https://calendar.YourWebsite.com</small></li>
+                    </div>
+
+                </div>
+            </ol><br>
+
+            <p>An example of path routing:</p><br>
+            <ol>
+                <div class="row">
+                    <div class="col-md-4">
+                        <li><small class="text-secondary" style="font-size: medium;">
+                        https://www.YourWebsite.com/<br>calendar</small> - Calendar app</li>
+                    </div>
+                    <div class="col-md-4">
+                        <li><small class="text-secondary" style="font-size: medium;">
+                        https://www.YourWebsite.com/<br>mail</small> - Mail app</li>
+                    </div>
+                    <div class="col-md-4">
+                        <li><small class="text-secondary" style="font-size: medium;">
+                        https://www.YourWebsite.com/<br>todo</small> - Todo app</li>
+                    </div>
+
+                </div>
+            </ol>
+
+        </div><br><br>
+
+        <div class="route-setting">
+            <h5 class="text-info text-center font-weight-bold">SETTING UP ROUTES</h5><br>
+            <p>In the file<small class="text-secondary" style="font-size: medium;"> manifest.yml</small>, random-route is set to <small class="text-secondary" style="font-size: medium;">true</small> to avoid duplicated host prefixes. To specify the route to an app, you can either:</p><br>
+            <ol>
+                <li>Configure the route using the <small class="text-secondary" style="font-size: medium;"> manifest.yml</small> file.</li><br>
+                <li>Use the CLI with a unique host by running the command <small class="text-secondary" style="font-size: medium;"> ibmcloud app route -map app_name domain -n host</small>.</li>
+            </ol>
+
+        </div><br><br>
+
+        <div class="deployment-procedure">
+            <h5 class="text-info text-center font-weight-bold">APPLICATION DEPLOYMENT PROCEDURE</h5><br>
+            
         </div>
 
    </div><br><br>
