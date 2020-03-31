@@ -428,9 +428,9 @@
                         <ol>
                             <h5 class="text-info">Kubernetes CLI</h5>
                         </ol>
-                        <p>Once you've downloaded the kubernetes command-line interface,<br> you should add the directory where <small class="font-italic text-secondary" style="font-size: medium;">kubectl</small> is installed to the <small class="font-italic text-secondary" style="font-size: medium;">PATH</small> environment variable.</p><br>
+                        <p>Once you've downloaded the kubernetes command-line interface,<br> you should add the directory where <small class="text-secondary" style="font-size: medium;">kubectl</small> is installed to the <small class="text-secondary" style="font-size: medium;">PATH</small> environment variable.</p><br>
 
-                        <p><small class="font-italic">N/B:</small><small class="font-italic text-secondary" style="font-size: medium;"> kubectl</small> is the kubernetes command line tool that allows you<br>to run commands against kubernetes clusters.</p>
+                        <p><small class="font-italic">N/B:</small><small class="text-secondary" style="font-size: medium;"> kubectl</small> is the kubernetes command line tool that allows you<br>to run commands against kubernetes clusters.</p>
                     </div>
                 </div>
 
@@ -456,7 +456,7 @@
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud plugin install dev</small> - Installs developer tools plugin.</li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud plugin show dev</small> - Shows developer tools plugin installation details.</li><br>
                             <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud cf help -a</small> - Lists out the available IBM Cloud commands.</li><br>
-                            <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud cf ssh app_name</small> - Explores how your app's directories are structured after deployment.</li><br>
+                            <li><small class="font-italic text-secondary" style="font-size: medium;">ibmcloud cf ssh {app_name}</small> - Explores how your app's directories are structured after deployment.</li><br>
 
                         </ol>
                     </div>
@@ -511,7 +511,7 @@
                     </div>
                 
                     <div class="col-md-6">
-                        <li>Pushing the app by running the following command: <small class="text-secondary" style="font-size: medium;">ibmcloud cf push -b buildpack_name</small></li>
+                        <li>Pushing the app by running the following command: <small class="text-secondary" style="font-size: medium;">ibmcloud cf push -b {buildpack_name}</small></li>
                     </div>
 
                 </div>
@@ -542,7 +542,7 @@
             <p>Refers to ensuring that the actual no. of running applications matches the wanted state always. To configure the no. of instances you want in <small class="text-secondary" style="font-size: medium;">manifest.yml</small>, specify the no. of instances in the instances key. In the event of a failure, cloud foundry kills or recreates missing instances to match the wanted state.</p><br>
 
             <h5 class="text-info">Making your app resilient using IBM Cloud CLI</h5><br>
-            <p>You can scale your app using the command : <small class="text-secondary" style="font-size: medium;">ibmcloud cf scale app_name -i no._of_instances
+            <p>You can scale your app using the command : <small class="text-secondary" style="font-size: medium;">ibmcloud cf scale {app_name} -i {no._of_instances}
             </small></p>
             <p><small class="font-italic text-secondary">N/B:</small> It's recommended that you specify the no. of wanted instances in your <small class="text-secondary" style="font-size: medium;">manifest.yml</small> file to ensure your configurations are stored as code.</p>
 
@@ -550,7 +550,7 @@
 
         <div class="debugging">
             <h5 class="text-info text-center font-weight-bold">LOGGING, DEBUGGING AND BINDING EXTERNAL SERVICES</h5><br>
-            <p>The cloud foundry platform provides log aggregations. To view events and logs for a deployed app, run the following commands: <small class="text-secondary" style="font-size: medium;">ibmcloud cf events app_name</small> and <small class="text-secondary" style="font-size: medium;">ibmcloud cf logs app_name
+            <p>The cloud foundry platform provides log aggregations. To view events and logs for a deployed app, run the following commands: <small class="text-secondary" style="font-size: medium;">ibmcloud cf events {app_name}</small> and <small class="text-secondary" style="font-size: medium;">ibmcloud cf logs {app_name}
             </small>.</p>
             
         </div><br><br>
@@ -568,7 +568,7 @@
                     <div class="col-md-3">
                         <li><small class="text-info" style="font-size: medium;">host prefix</small> </li><br>
                         <p>vy301-2eb-nodesample</p>
-                    </div>
+                    </div><br>
 
                     <div class="col-md-2"></div>
 
@@ -576,11 +576,11 @@
                         <li><small class="text-info" style="font-size: medium;">region
                         </small> </li><br>
                         <p>.eu-gb.</p>
-                    </div>
+                    </div><br>
 
                     <div class="col-md-3">
                         <li><small class="text-info" style="font-size: medium;">domain
-                        </small> </li><br>
+                        </small></li><br>
                         <p>cf.appdomain.cloud</p>
                     </div> 
                 </div>
@@ -592,12 +592,16 @@
             <ol>
                 <div class="row">
                     <div class="col-md-6">
-                        <li><small class="text-secondary" style="font-size: medium;">
-                            https://www.YourWebsite.com/calendar</small></li>
+                        <li>
+                            <a href="https://www.YourWebsite.com/calendar" target="_blank">https://www.YourWebsite.com/calendar</a>
+                        </li>
                     </div>
-                    <div class="col-md-6">
-                        <li><small class="text-secondary" style="font-size: medium;">
-                            https://calendar.YourWebsite.com</small></li>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <li>
+                            <a href="https://calendar.YourWebsite.com" target="_blank">
+                                https://calendar.YourWebsite.com</a> 
+                        </li>
                     </div>
 
                 </div>
@@ -607,16 +611,17 @@
             <ol>
                 <div class="row">
                     <div class="col-md-4">
-                        <li><small class="text-secondary" style="font-size: medium;">
-                        https://www.YourWebsite.com/<br>calendar</small> - Calendar app</li>
+                        <li>
+                            <a href="https://www.YourWebsite.com/calendar" target="_blank">https://www.YourWebsite.com/<br>calendar</a> - Calendar app</li>
                     </div>
                     <div class="col-md-4">
-                        <li><small class="text-secondary" style="font-size: medium;">
-                        https://www.YourWebsite.com/<br>mail</small> - Mail app</li>
+                        <li>
+                            <a href="https://www.YourWebsite.com/mail" target="_blank">https://www.YourWebsite.com/<br>mail
+                            </a> - Mail app</li>
                     </div>
                     <div class="col-md-4">
-                        <li><small class="text-secondary" style="font-size: medium;">
-                        https://www.YourWebsite.com/<br>todo</small> - Todo app</li>
+                        <li>
+                            <a href="https://www.YourWebsite.com/todo" target="_blank">https://www.YourWebsite.com/<br>todo</a> - Todo app</li>
                     </div>
 
                 </div>
@@ -629,14 +634,75 @@
             <p>In the file<small class="text-secondary" style="font-size: medium;"> manifest.yml</small>, random-route is set to <small class="text-secondary" style="font-size: medium;">true</small> to avoid duplicated host prefixes. To specify the route to an app, you can either:</p><br>
             <ol>
                 <li>Configure the route using the <small class="text-secondary" style="font-size: medium;"> manifest.yml</small> file.</li><br>
-                <li>Use the CLI with a unique host by running the command <small class="text-secondary" style="font-size: medium;"> ibmcloud app route -map app_name domain -n host</small>.</li>
+                <li>Use the CLI with a unique host by running the command <small class="text-secondary" style="font-size: medium;"> ibmcloud app route -map {app_name} {domain} -n {host}</small>.</li>
             </ol>
 
         </div><br><br>
 
         <div class="deployment-procedure">
             <h5 class="text-info text-center font-weight-bold">APPLICATION DEPLOYMENT PROCEDURE</h5><br>
+            <ol>
+                <li>Obtain a randomly generated ID (Universally Unique Identifier) from <a href="https://www.uuidgenerator.net/" target="_blank">https://www.uuidgenerator.net/</a>. The first three characters are your randomly generated ID.</li><br>
+                <li>To create an app with the SDK for Node.js runtime environment, click <small class="text-secondary" style="font-size: medium;">Create Resource
+                </small> on the dashboard.</li><br>
+                <li>Select <small class="text-secondary" style="font-size: medium;">Cloud Foundry</small> under the 
+                    <small class="text-secondary" style="font-size: medium;">Compute
+                </small> option.</li><br>
+                <li>From the Cloud Foundry overview page, click <small class="text-secondary" style="font-size: medium;">Create</small> under <small class="text-secondary" style="font-size: medium;">Public Applications</small>.</li><br>
+                <li>Complete  the details to create a cloud foundry app. The <small class="text-secondary" style="font-size: medium;">xxx</small> in your app name represents the three first three characters of your generated unique identifier, <small class="font-italic">e.g.</small> if your app name is given as <small class="text-secondary" style="font-size: medium;">vy301-xxx-nodesample</small> and your generated ID is <small class="text-secondary" style="font-size: medium;">2eb</small>, then your app name should be <small class="text-secondary" style="font-size: medium;">vy301-2eb-nodesample</small>.
+                    <p>The host name corresponds to the app name, the region is set based on your location, the organization is the email you used to sign up for an IBM Cloud account and the space is automatically set to dev.</p>
+                </li>
+                <li>On cloning the sample file given to your desired destination, navigate to the where the folder has been extracted.</li><br>
+                <li>Open the <small class="text-secondary" style="font-size: medium;">manifest.yml</small> file on your editor and change your app name to what you set it to.</li><br>
+                <li><small class="text-secondary" style="font-size: medium;">random-route:true</small> genarates a random route to the app.</li><br>
+                <li>Log in to your account via the IBM Cloud CLI.</li><br>
+                <li>Select the cloud foundry API endpoint, organization and space to which you want to deploy your app using the command <small class="text-secondary" style="font-size: medium;">ibmcloud target --cf-api {cf api endpoint} -o {org} -s {space}</small>.</li><br>
+                <li>Deploy the app to the clousd using the command <small class="text-secondary" style="font-size: medium;">ibmcloud cf push {app_name}</small></li><br>
+                <li>To confirm that your app is running, open the URL on your browser.</li>
+            </ol>
             
+        </div><br><br>
+
+        <div class="badges-claimed">
+            <h5 class="text-info text-center font-weight-bold">BADGES CLAIMED</h5><br><br>
+
+            <ol>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Cloud Intro</h6><br>
+                        <a href="https://www.youracclaim.com/earner/earned/badge/4c1dc5e6-f22a-4e2b-ab2c-83397c24ee4b" target="_blank">https://www.youracclaim.com/earner/earned/badge/<br>4c1dc5e6-f22a-4e2b-ab2c-83397c24ee4b</a>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-5">
+                        <h6 class="text-warning">Getting started with IBM Cloud V2</h6><br>
+                        <a href="https://www.youracclaim.com/earner/earned/badge/ed2b04dd-c170-4fd2-a225-f9d1bbbd2f98" target="_blank">https://www.youracclaim.com/earner/earned/<br>badge/ed2b04dd-c170-4fd2-a225-f9d1bbbd2f98</a>
+
+                    </div>
+
+                </div>
+            </ol><br>
+
+            <ol>
+                <div class="row">
+                <div class="col-md-6">
+                    <h6 class="text-warning">Getting started with IBM Cloud V2</h6><br>
+                    <a href="https://www.youracclaim.com/earner/earned/badge/c2b1748d-7acd-4f7b-b0ca-7f675571204f" target="_blank">https://www.youracclaim.com/earner/earned/badge/<br>c2b1748d-7acd-4f7b-b0ca-7f675571204f</a>
+                </div>
+
+                <div class="col-md-1"></div>
+
+                <div class="col-md-5">
+                    <h6 class="text-warning">Cloud Foundry V2</h6><br>
+                    <a href="https://www.youracclaim.com/badges/44e9e5c5-942d-4ad2-9db0-0c29b569ea3f" target="_blank">https://www.youracclaim.com/badges/44e9e5c5-942d-4ad2-9db0-0c29b569ea3f</a>
+                </div>
+                    
+                </div>
+            </ol>
+
+
+
         </div>
 
    </div><br><br>
@@ -646,5 +712,10 @@
         <hr>
         <p class="text-muted text-center font-italic">&copy; Maureen Njeri 2020</p>
     </div>
+
+<!-- script tags -->
+<script src="assets/js/jquery-3.4.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
 </body> 
 </html>
